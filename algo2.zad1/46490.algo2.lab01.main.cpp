@@ -1,7 +1,4 @@
-﻿/*ALGO2 IS1 222A LAB01
-  Weronika Cieślak
-  cw46490@zut.edu.pl
-*/
+
 
 #include <iostream>
 #include <time.h>
@@ -295,7 +292,9 @@ int main()
 			list -> add_at_tail(*so);
 
 			delete so;
-		}				clock_t t2 = clock();
+		}
+		
+		clock_t t2 = clock();
 	
 		t1 = clock();
 		std::cout <<"t1 "<< t1 << "\n";
@@ -307,7 +306,8 @@ int main()
 			list->search_and_delete(*so1);
 		}
 		
-		t2 = clock();		std::cout <<"t2 "<< t2 << "\n";
+		t2 = clock();
+		std::cout <<"t2 "<< t2 << "\n";
 		list->display_list();
 		list->clear();
 	}
