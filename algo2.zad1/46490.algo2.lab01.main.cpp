@@ -209,7 +209,7 @@ public:
 			
 			if (current==NULL)
 			{
-				//std::cout << "Nie ma elementu z takimi danymi!\n";
+				
 
 				
 				return current;
@@ -218,7 +218,6 @@ public:
 		}
 		if (current->field == data)
 		{
-			//std::cout << "Znalezione element z takimi danymi: " << (current->field) << "\n";
 			return current;
 		}
 
@@ -227,12 +226,9 @@ public:
 	{
 		node<T> *current = search_element(data);
 		
-		if (current == NULL)
+		if (current != NULL)
 		{
-			std::cout << "Nie ma elementu z takimi danymi!\n";
 			
-		}
-		else {
 			node<T> *temp = NULL;
 			temp = current;
 			current = current->previous;
