@@ -17,26 +17,26 @@ struct stored_data
 	}
 	
 	
-friend std::ostream& operator<<(std::ostream& os, const stored_data& sd)
+std::ostream& operator<<(std::ostream& os, const stored_data& sd)
 {
 		os <<"Dane przechowywane: " <<sd.int_data << " " << sd.char_data<<"\n";
 		return os;
 }
-friend bool operator==(const stored_data &st,const stored_data&sd)
+bool operator==(const stored_data &st,const stored_data&sd)
 {
 	if (st.int_data == sd.int_data &&st.char_data == sd.char_data)
 		return true;
 	else
 		return false;
 }
-friend bool operator !=(const stored_data& st, const stored_data&sd)
+bool operator !=(const stored_data& st, const stored_data&sd)
 {
 	if (st.int_data == sd.int_data &&st.char_data == sd.char_data)
 		return false;
 	else
 		return true;
 }
-friend bool operator <(const stored_data&  so1, const stored_data& so2)
+bool operator <(const stored_data&  so1, const stored_data& so2)
 {
 	int diff = so1.int_data - so2.int_data;
 	if (diff < 0)
